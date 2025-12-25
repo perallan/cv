@@ -1,0 +1,371 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+  touch-action: manipulation;
+}
+
+:root {
+  --bg: #ffffff;
+  --surface: #ececec;
+  --muted-700: #6b6b6b;
+  --muted-500: #9a9a9a;
+  --accent: #2b8f85;
+  --accent-hover: #246e64;
+  --link-visited: #5a6b66;
+  --accent-on-dark: #ffffff;
+  --accent-on-dark-hover: #f0f0f0;
+  --link-on-muted-500: #1a1a1a;
+  --focus: #ffd54d;
+}
+
+.nunito-normal {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nunito-medium {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nunito-bold {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", "Trebuchet MS", "Segoe UI", Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 20px 0 20px;
+  width: 100%;
+
+  h1,
+  h2,
+  p {
+    margin: 0;
+    text-align: center;
+  }
+  p {
+    font-size: 0.96rem;
+  }
+}
+
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 800px) {
+  header {
+    flex-direction: row;
+    padding: 50px 50px 0 50px;
+
+    h1,
+    h2,
+    p {
+      text-align: left;
+    }
+  }
+  .inner-header {
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1024px;
+  }
+  .profile p {
+    margin-bottom: 50px;
+  }
+}
+
+h1,
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.on-dark a,
+.main-contact .inner-contact a {
+  color: var(--accent-on-dark);
+}
+
+.on-dark a:visited,
+.main-contact .inner-contact a:visited {
+  color: var(--accent-on-dark);
+}
+
+.on-dark a {
+  color: var(--accent-on-dark);
+}
+
+.on-dark a:visited {
+  color: var(--accent-on-dark);
+}
+
+.on-dark a:hover {
+  color: var(--accent-on-dark-hover);
+  text-decoration: underline;
+}
+
+.on-dark a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.main-contact .inner-contact a {
+  color: var(--accent-on-dark);
+}
+
+.main-contact .inner-contact a:visited {
+  color: var(--accent-on-dark);
+}
+
+.main-contact .inner-contact a:hover {
+  color: var(--accent-on-dark-hover);
+  text-decoration: underline;
+}
+
+.main-contact .inner-contact a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.intro {
+  margin-bottom: 32px;
+}
+
+.header-content {
+  align-content: flex-start;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-picture {
+  align-content: flex-end;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.picture {
+  padding: 20px;
+  text-align: center;
+  width: 290px;
+
+  img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (min-width: 800px) {
+  .picture {
+    background-color: var(--muted-500);
+    border-top-left-radius: 145px;
+    border-top-right-radius: 145px;
+    padding: 20px;
+    text-align: center;
+    width: 290px;
+
+    img {
+      border-radius: 50%;
+      height: 250px;
+      width: 250px;
+    }
+  }
+}
+
+main {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+}
+
+.inner-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.main-experience {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.main-contact {
+  align-self: stretch;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  .inner-contact {
+    background-color: var(--muted-500);
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin-block: 0 32px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 50px 50px 50px;
+    width: 100%;
+  }
+
+  .inner-main {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1024px;
+    width: 100%;
+  }
+
+  .main-experience {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .main-contact {
+    align-self: stretch;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    .inner-contact {
+      border-radius: 0;
+      padding: 50px 20px 20px 20px;
+      width: 290px;
+    }
+  }
+}
+
+  /* Print styles */
+  @media print {
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+    }
+
+    /* General adjustments for printing */
+    body {
+      background: var(--bg) !important;
+      color: #000;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* Ensure job entries are not split across pages */
+    .main-experience .job {
+      page-break-inside: avoid;
+      break-inside: avoid-column;
+      break-inside: avoid-page;
+      -webkit-column-break-inside: avoid;
+      padding-bottom: 6px;
+    }
+
+    /* If the remaining space is too small, force the contact column to the next page */
+    .main-contact {
+      page-break-before: always;
+      break-before: always;
+    }
+
+    .main-contact .inner-contact a {
+      color: var(--link-on-muted-500);
+  }
+
+    /* Reduce spacing to fit more content on a printed page */
+    header, .inner-header, main, .inner-main {
+      padding: 0;
+      margin: 0;
+    }
+    .inner-header {
+      padding: 20px 20px 0 20px;
+    }
+
+    /* Make sure images don't overflow */
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    /* Avoid printing background-heavy decorative elements */
+    .picture, .inner-contact {
+      background: transparent !important;
+    }
+
+    /* Use a readable font-size for print */
+    body { font-size: 12pt; }
+  }
