@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# System files
+*~
+*.swp
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Misc
+.env
+.env.local
+.env.*.local
+
+# Images and large assets (optional)
+# img/
