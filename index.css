@@ -57,6 +57,23 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.reading-bar {
+  background-color: #007AFF; /* iOS blue */
+  height: 10px;
+  width: 0;
+  position: fixed;
+  top: 0;
+
+  /* the cool stuff */
+  animation: fill linear;
+  animation-timeline: scroll();
+}
+
+@keyframes fill {
+  to {width: 100% }
 }
 
 header {
