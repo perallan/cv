@@ -26,6 +26,8 @@ html {
   --accent-on-dark-hover: #f0f0f0;
   --link-on-muted-500: #1a1a1a;
   --focus: #ffd54d;
+
+  interpolate-size: allow-keywords; /* Gjør det mulig å animere til height: auto */
 }
 
 .nunito-normal {
@@ -327,6 +329,86 @@ main {
       width: 290px;
     }
   }
+}
+
+/* CSS testing fun stuff */
+.main {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+}
+summary {
+  background: #f4f4f4;
+  display: flex; 
+  align-items: center;
+  
+  cursor: pointer;
+  list-style: none; /* For Chrome/Firefox */
+  font-weight: bold;
+  padding: 1rem;
+}
+summary::marker {
+  content: "";
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::before {
+  content: '+';
+  position: absolute;
+  inset-inline-end: 1rem;
+  transition: transform 0.3s;
+}
+details[open] summary::before {
+  content: '-';
+  transform: rotate(180deg);
+}
+details::details-content {
+  display: grid;
+  grid-template-rows: 0fr; /* Lukket tilstand */
+  opacity: 0;
+  overflow: hidden;
+  
+  
+  /* Definer overgangen for både grid og synlighet */
+  transition: 
+    grid-template-rows 0.4s ease-in-out,
+    opacity 0.4s ease-in-out,
+    content-visibility 0.4s allow-discrete,
+    display 0.4s allow-discrete;
+}
+details[open] {
+  min-height: 0.001px; 
+}
+/* Når FAQ er åpen */
+details[open]::details-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  content-visibility: visible;
+}
+details {
+  display: block; /* Overstyrer Safari's standard 'block details' */
+  max-width: 400px;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+.faq-content {
+  min-height: 0;
+}
+.faq-content p {
+  padding: 1rem;
+  margin: 0;
 }
 
   /* Print styles */
