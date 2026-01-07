@@ -411,60 +411,146 @@ details {
   margin: 0;
 }
 
-  /* Print styles */
-  @media print {
-    :root {
-      color-scheme: light;
-      --bg: #ffffff;
-    }
-
-    /* General adjustments for printing */
-    body {
-      background: var(--bg) !important;
-      color: #000;
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
-
-    /* Ensure job entries are not split across pages */
-    .main-experience .job {
-      page-break-inside: avoid;
-      break-inside: avoid-column;
-      break-inside: avoid-page;
-      -webkit-column-break-inside: avoid;
-      padding-bottom: 6px;
-    }
-
-    /* If the remaining space is too small, force the contact column to the next page */
-    .main-contact {
-      page-break-before: always;
-      break-before: always;
-    }
-
-    .main-contact .inner-contact a {
-      color: var(--link-on-muted-500);
+/* Print styles */
+@media print {
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
   }
 
-    /* Reduce spacing to fit more content on a printed page */
-    header, .inner-header, main, .inner-main {
-      padding: 0;
-      margin: 0;
-    }
-    .inner-header {
-      padding: 20px 20px 0 20px;
-    }
-
-    /* Make sure images don't overflow */
-    img {
-      max-width: 100% !important;
-      height: auto !important;
-    }
-
-    /* Avoid printing background-heavy decorative elements */
-    .picture, .inner-contact {
-      background: transparent !important;
-    }
-
-    /* Use a readable font-size for print */
-    body { font-size: 12pt; }
+  body {
+    background: var(--bg) !important;
+    color: #000;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
+
+  .main-experience .job {
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    break-inside: avoid-page;
+    -webkit-column-break-inside: avoid;
+    padding-bottom: 6px;
+  }
+
+  .main-contact {
+    page-break-before: always;
+    break-before: always;
+  }
+
+  .main-contact .inner-contact a {
+    color: var(--link-on-muted-500);
+  }
+
+  header, .inner-header, main, .inner-main {
+    padding: 0;
+    margin: 0;
+  }
+  .inner-header {
+    padding: 20px 20px 0 20px;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .picture, .inner-contact {
+    background: transparent !important;
+  }
+
+  body { font-size: 12pt; }
+}
+
+
+/* css functions, for Chrome */
+.button {
+  background: var(--accent, #4f46e5);
+  color: var(--accent-on-dark, #fff);
+  transition: background .15s ease, transform .12s ease;
+  border: 0;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-row {
+  padding-top: 18px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  border: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--accent, #4f46e5);
+  transition: transform .12s ease, background .12s ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--accent-hover, var(--accent));
+  transform: scale(1.12);
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent, #4f46e5) 20%, transparent);
+}
+
+.demo-buttons .inner {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.function-wrapper { margin-top: 18px; }
+.function-wrapper .button {
+  background: var(--accent, #4f46e5);
+  color: var(--accent-on-dark, #fff);
+  border: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .15s ease, transform .12s ease;
+  font-family: inherit;
+}
+.btn-row { padding-top: 12px; display:flex; gap:10px; align-items:center; }
+.color-input { position: absolute; left: -9999px; }
+.btn { width:20px; height:20px; border-radius:50%; border:0; cursor:pointer; transition: transform .12s ease, box-shadow .12s ease; background: var(--btn-color,#4f46e5); display:inline-block; text-indent:-9999px; }
+.btn.reset { width: 28px; height: 20px; border-radius:6px; font-weight:bold; display:inline-flex; align-items:center; justify-content:center; text-indent:0; background: #f4f4f4; color:#333; }
+.btn:hover, .btn:focus { transform: scale(1.12); box-shadow: 0 0 0 6px color-mix(in srgb, var(--btn-color,#4f46e5) 18%, transparent); }
+.btn.selected { box-shadow: 0 0 0 4px color-mix(in srgb, var(--btn-color,#4f46e5) 28%, transparent); transform: scale(1.12); }
+.function-wrapper .button:focus { outline: 3px solid #ffd54d; outline-offset: 2px; }
+
+/* CSS-only: when a label is hovered or its radio is checked, set --accent on wrapper */
+.function-wrapper:has(.btn.c1:hover),
+.function-wrapper:has(#c1:checked) { --accent: #4f46e5; }
+.function-wrapper:has(.btn.c2:hover),
+.function-wrapper:has(#c2:checked) { --accent: #06b6d4; }
+.function-wrapper:has(.btn.c3:hover),
+.function-wrapper:has(#c3:checked) { --accent: #f97316; }
+.function-wrapper:has(.btn.c4:hover),
+.function-wrapper:has(#c4:checked) { --accent: #ef4444; }
+.function-wrapper:has(.btn.c5:hover),
+.function-wrapper:has(#c5:checked) { --accent: #10b981; }
+.function-wrapper:has(.btn.c6:hover),
+.function-wrapper:has(#c6:checked) { --accent: #f59e0b; }
+.function-wrapper:has(.btn.c7:hover),
+.function-wrapper:has(#c7:checked) { --accent: #a78bfa; }
+.function-wrapper:has(.btn.c8:hover),
+.function-wrapper:has(#c8:checked) { --accent: #ec4899; }
+
+/* show selected state when radio is checked */
+.function-wrapper:has(#c1:checked) .btn.c1,
+.function-wrapper:has(#c2:checked) .btn.c2,
+.function-wrapper:has(#c3:checked) .btn.c3,
+.function-wrapper:has(#c4:checked) .btn.c4,
+.function-wrapper:has(#c5:checked) .btn.c5,
+.function-wrapper:has(#c6:checked) .btn.c6,
+.function-wrapper:has(#c7:checked) .btn.c7,
+.function-wrapper:has(#c8:checked) .btn.c8 { box-shadow: 0 0 0 4px color-mix(in srgb, var(--btn-color,#4f46e5) 28%, transparent); transform: scale(1.12); }
