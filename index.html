@@ -87,7 +87,7 @@
               <li>Utvikling av skalerbare webapplikasjoner i React og TypeScript.</li>
               <li>Vedlikehold og videreutvikling av et designsystem for konsistente brukeropplevelser.</li>
               <li>Forbedret ytelse, tilgjengelighet og testdekning gjennom tverrfaglig samarbeid.</li>
-              <li>Redesign og reimplementering av Godt Forberedt for Gjensidige.</li>
+              <li>Redesign og reimplementering av Godt Forberedt for Gjensidige / Enonic XP.</li>
             </ul>
           </article>
 
@@ -180,15 +180,6 @@
             </ul>
           </article>
         </section>    
-        
-        <section class="demo-buttons">
-          <h2>Farge-demo</h2>
-          <p>Hold musepekeren over en liten knapp for å endre hovedknappens farge.</p>
-          <div class="inner">
-            <button class="button demo-main-button" type="button">Hovedknapp</button>
-            <div class="btn-row" id="btnRow" aria-label="Fargevalg"></div>
-          </div>
-        </section>
 
         <section class="main-contact">
           <div class="inner-contact">
@@ -220,59 +211,5 @@
       </div>
            
     </main>
-    <script>
-      (function () {
-        const colors = ['#4f46e5','#06b6d4','#f97316','#ef4444','#10b981','#f59e0b','#a78bfa','#ec4899'];
-        const btnRow = document.getElementById('btnRow');
-        const mainBtn = document.querySelector('.demo-main-button');
-        let activeColor = null;
-
-        function mixWithWhite(hex, t){
-          const c = hex.replace('#','');
-          const num = parseInt(c,16);
-          let r = (num >> 16) & 255;
-          let g = (num >> 8) & 255;
-          let b = num & 255;
-          r = Math.round(r + (255 - r) * t);
-          g = Math.round(g + (255 - g) * t);
-          b = Math.round(b + (255 - b) * t);
-          return '#'+( (1<<24) + (r<<16) + (g<<8) + b ).toString(16).slice(1);
-        }
-
-        colors.forEach((color, i) => {
-          const b = document.createElement('button');
-          b.className = 'btn';
-          b.type = 'button';
-          b.setAttribute('aria-label', `Farge ${i+1}`);
-          const hover = mixWithWhite(color, 0.5);
-          b.style.setProperty('--accent', color);
-          b.style.setProperty('--accent-hover', hover);
-          b.style.background = color;
-
-          b.addEventListener('mouseenter', () => {
-            if (!activeColor) {
-              mainBtn.style.setProperty('--accent', color);
-              mainBtn.style.setProperty('--accent-hover', hover);
-            }
-          });
-
-          b.addEventListener('click', () => {
-            activeColor = color;
-            mainBtn.style.setProperty('--accent', color);
-            mainBtn.style.setProperty('--accent-hover', hover);
-          });
-
-          btnRow.appendChild(b);
-        });
-
-        btnRow.addEventListener('mouseleave', () => {
-          if (!activeColor) {
-            mainBtn.style.removeProperty('--accent');
-            mainBtn.style.removeProperty('--accent-hover');
-          }
-        });
-
-      }());
-    </script>
   </body>
 </html>
