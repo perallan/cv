@@ -1,0 +1,141 @@
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  
+  /* Aktiverer gruppen for markører etter innholdet */
+  scroll-marker-group: after;
+  /* Definerer denne containeren som et anker-navn */
+  anchor-name: --my-carousel;
+}
+
+/* Felles styling for piler */
+.scroll-container::scroll-button(left),
+.scroll-container::scroll-button(right) {
+  content: "";
+  position: absolute; /* Brukes med anchor positioning */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  display: block;
+  outline: none;
+  border: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-appearance: none;
+}
+
+/* Plassering av VENSTRE-pil ved hjelp av ankeret */
+.scroll-container::scroll-button(left) {
+  /* Plasserer knappens venstre side 20px fra ankerets venstre side */
+  left: anchor(--my-carousel left);
+  margin-left: 20px;
+  
+  /* Sentrerer vertikalt i forhold til ankeret */
+  top: anchor(--my-carousel center);
+
+}
+
+/* Plassering av HØYRE-pil ved hjelp av ankeret */
+.scroll-container::scroll-button(right) {
+  /* Plasserer knappens høyre side 20px fra ankerets høyre side */
+  right: anchor(--my-carousel right);
+  margin-right: 20px;
+  top: anchor(--my-carousel center);
+}
+
+.scroll-container::scroll-button(left) {
+  background-image: url(arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.scroll-container::scroll-button(right) {
+  background-image: url(arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transform: translateY(-50%);
+}
+
+
+/* Skjuler pilen automatisk når det ikke er mer å rulle */
+.scroll-container::scroll-button(right):disabled,
+.scroll-container::scroll-button(left):disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Hvert enkelt lysbilde */
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: lightblue;
+
+  view-timeline: --slide-visible inline;
+}
+
+/* Selve beholderen for prikkene (generert av scroll-marker-group) */
+.scroll-container::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px;
+  background: #f0f0f0;
+}
+
+/* De individuelle prikkene som lages for hvert element i containeren */
+.slide::scroll-marker {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  /* Her skjer magien: 
+     Animasjonen styres av hvor synlig den tilhørende sliden er */
+  animation: highlight-dot linear both;
+  animation-timeline: --slide-visible;
+}
+
+.scroll-container::scroll-button(left):active {
+  transform: translateY(-50%) rotate(180deg) scale(0.9);
+  transition: transform 0.1s;
+}
+
+.scroll-container::scroll-button(right):active {
+  transform: translateY(-50%) scale(0.9);
+  transition: transform 0.1s;
+}
+
+/* Styling av prikken som tilsvarer det synlige elementet */
+.slide::scroll-marker:target-current {
+  background-color: #333;
+  transform: scale(1.2);
+}
+
+@keyframes highlight-dot {
+  0%, 100% { 
+    background: #bbb; 
+    transform: scale(1); 
+  }
+  50% { 
+    background: #007bff; 
+    transform: scale(1.4); 
+  }
+}
