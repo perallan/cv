@@ -1,228 +1,417 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Per Allan Johansson — Senior Frontend Developer</title>
-  <meta property="og:site_name" content="CV | Per Allan Johansson">
+  <meta name="description" content="CV for Per Allan Johansson — senior frontend-utvikler med 25+ års erfaring innen web, React, TypeScript, designsystemer og digitale produkter.">
+  <meta name="author" content="Per Allan Johansson">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070808">
+
+  <link rel="canonical" href="https://webadvice.no/cv/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="webadvice.no">
   <meta property="og:locale" content="nb_NO">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#BCFBDE">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#002A2A">
-  <meta property="og:image" content="https://webadvice.no/cv/img/share.jpg">
-  <meta property="og:image:alt" content="Bilde av meg">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Per Allan Johansson — Senior Frontend Developer">
+  <meta property="og:description" content="25+ år med web. Fortsatt nysgjerrig på hva vi kan bygge i morgen.">
+  <meta property="og:url" content="https://webadvice.no/cv/">
+  <meta property="og:image" content="https://webadvice.no/cv/share.png">
+  <meta property="og:image:secure_url" content="https://webadvice.no/cv/share.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta name="description" content="CV for Per Allan Johansson">
-  <meta property="og:description" content="CV for Per Allan Johansson">
-  <meta property="og:title" content="Per Allan Johansson — Senior Frontend Developer">
-  <meta property="og:url" content="https://webadvice.no/cv/">
-  <meta name="author" content="Per Allan Johansson">
-  <link rel="canonical" href="https://webadvice.no/cv/">
+  <meta property="og:image:alt" content="Per Allan Johansson — Senior Frontend Developer. Ikke helt som alle andre. Heldigvis.">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Per Allan Johansson — Senior Frontend Developer">
+  <meta name="twitter:description" content="25+ år med web. Fortsatt nysgjerrig på hva vi kan bygge i morgen.">
+  <meta name="twitter:image" content="https://webadvice.no/cv/share.png">
+  <meta name="twitter:image:alt" content="Per Allan Johansson — Senior Frontend Developer. Ikke helt som alle andre. Heldigvis.">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap">
-  <link rel="stylesheet" href="index.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1134961-13"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.e36f70bab6f8.css">
+  <link rel="stylesheet" href="stack.e0dfec0cd014.css">
+  <link rel="stylesheet" href="print.2f39b37a5979.css" media="print">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-438C1VW0TM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'UA-1134961-13');
+    gtag('config', 'G-438C1VW0TM');
   </script>
+
+  <!-- Structured data -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Per Allan Johansson",
-      "url": "https://webadvice.no/cv",
-      "jobTitle": "Senior Frontend Developer",
-      "sameAs": [
-        "https://www.linkedin.com/in/perallan/"
-      ],
-      "email": "mailto:perallan@gmail.com"
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Per Allan Johansson",
+    "url": "https://webadvice.no/cv/",
+    "image": "https://webadvice.no/cv/share.png",
+    "jobTitle": "Senior Frontend Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Uno-X Mobility"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/perallan/",
+      "https://webadvice.no/"
+    ],
+    "email": "mailto:perallan@gmail.com"
+  }
+  </script>
 </head>
-
 <body>
-  <div class="reading-bar"></div>
-  <header>
-    <div class="inner-header">
-      <section class="header-content">
-        <div class="intro">
-          <h1 class="nunito-bold">Per Allan Johansson</h1>
-          <p>Senior Frontend Utvikler</p>
-        </div>
+  <div class="reading-bar" aria-hidden="true"></div>
 
-        <div class="profile">
-          <h2>Profil</h2>
-          <p>
-            Senior frontend-utvikler med over 25 års erfaring innen webutvikling, CMS og moderne teknologier.
-            Spesialisert i HTML, CSS, React og TypeScript, med solid kompetanse på designsystemer og streamingløsninger.
-            Erfaring fra komplekse prosjekter for ledende aktører som Uno-X Mobility, Elton, Gjensidige, BEKK, RiksTV og
-            Strim.
-          </p>
-        </div>
-      </section>
+  <header class="hero">
+    <div class="hero__inner">
+      <a class="brand" href="https://webadvice.no/">webadvice.no<span>/cv</span></a>
 
-      <section class="header-picture">
-        <div class="picture">
-          <p><img src="img/me.png" alt="Bilde av Per Allan Johansson"></p>
-        </div>
-      </section>
+      <nav class="hero__nav" aria-label="CV-navigasjon">
+        <a href="#na">Nå</a>
+        <a href="#erfaring">Erfaring</a>
+        <a href="#kompetanse">Kompetanse</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
 
+      <div class="hero__copy">
+        <p class="eyebrow">Per Allan Johansson</p>
+        <p class="role">Senior Frontend Developer</p>
+
+        <h1>
+          Ikke helt<br>
+          som alle andre.<br>
+          <span>Heldigvis.</span>
+        </h1>
+
+        <p class="hero__lead">
+          25+ år med web. Fortsatt nysgjerrig på hva vi kan bygge i morgen.
+        </p>
+
+        <ul class="hero__tags">
+          <li>Frontend</li>
+          <li>Produkt</li>
+          <li>Designsystemer</li>
+          <li>AI</li>
+          <li>Web</li>
+        </ul>
+      </div>
+
+      <figure class="hero__portrait">
+        <img src="img/me.png" alt="Bilde av Per Allan Johansson">
+        <figcaption>Nysgjerrig siden 1998.</figcaption>
+      </figure>
     </div>
   </header>
 
-  <main>
-    <div class="inner-main">
-      <section class="main-experience">
-        <h2>Arbeidserfaring</h2>
+  <main class="page-shell">
+    <div class="content-grid">
+      <div class="content-main">
+        <section class="experience" id="erfaring" aria-labelledby="experience-title">
+          <div class="section-heading">
+            <h2 id="experience-title">Erfaring</h2>
+            <p>Scroll bakover. Klikk på en kortrygg for å gå tilbake. ↓</p>
+          </div>
+          <ol class="job-stack" style="--card-count: 12" role="list">
+            <li class="job-slot" style="--index: 0">
+              <span class="job-anchor" id="na" tabindex="-1" aria-label="Jobberfaring 1"></span>
+              <div class="job-card job-card--current">
+              <article class="job-card__content" aria-labelledby="job-title-0">
+                <a class="job-card__tab" href="#na" aria-label="Vis Uno-X Mobility / Elton, 2026 →"><span>2026 →</span><strong>Uno-X Mobility / Elton</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2026 →</p><span>Nå · Pågående</span></div>
+                  <h3 id="job-title-0">Uno-X Mobility / Elton</h3>
+                  <p class="job-card__role">Seniorutvikler</p>
+                  <p class="job-card__summary">Jeg jobber med å bygge og forbedre digitale produkter på tvers av web, app og interne verktøy.
+              Bidrar både i kode og i hvordan nye løsninger formes.</p>
+                  <ul class="impact-list">
+              <li>Utvikling av web og app i React, React Native og TypeScript.</li>
+              <li>Videreutvikling av designsystem og komponentbiblioteker.</li>
+              <li>Nye konsepter og produkter fra idé til prototype og produksjon.</li>
+              <li>Fokus på brukeropplevelse, tilgjengelighet, ytelse og god arkitektur.</li>
+              <li>Tett samarbeid med produkt, design og andre utviklere.</li>
+            </ul>
+                  <nav class="job-card__browse" aria-label="Bla fra Uno-X Mobility / Elton"><a href="#jobb-2">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><img src="img/logos/elton.svg" alt="" width="240" height="120"></div>
+              </article>
+              </div>
+            </li>
 
-        <article class="job">
-          <h3>Seniorutvikler | Uno-X Mobility</h3>
-          <p class="date">August 2026 - active now</p>
-          <ul>
-            <li>Utvikling av skalerbare webapplikasjoner i React, ReactNative og TypeScript.</li>
-            <li>Vedlikehold og videreutvikling av et designsystem for konsistente brukeropplevelser.</li>
-            <li>Forbedret ytelse, tilgjengelighet og testdekning gjennom tverrfaglig samarbeid.</li>
-          </ul>
-        </article>
+            <li class="job-slot" style="--index: 1">
+              <span class="job-anchor" id="jobb-2" tabindex="-1" aria-label="Jobberfaring 2"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-1">
+                <a class="job-card__tab" href="#jobb-2" aria-label="Vis Gjensidige, 2024 — 2026"><span>2024 — 2026</span><strong>Gjensidige</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2024 — 2026</p><span>02 / 12</span></div>
+                  <h3 id="job-title-1">Gjensidige</h3>
+                  <p class="job-card__role">Seniorutvikler</p>
+                  <p class="job-card__summary">Digitale tjenester i React og TypeScript. Designsystem, tilgjengelighet, ytelse og redesign av Godt Forberedt / Enonic XP.</p>
 
-        <article class="job">
-          <h3>Seniorutvikler | Gjensidige</h3>
-          <p class="date">August 2024 - Mars 2026</p>
-          <ul>
-            <li>Utvikling av skalerbare webapplikasjoner i React og TypeScript.</li>
-            <li>Vedlikehold og videreutvikling av et designsystem for konsistente brukeropplevelser.</li>
-            <li>Forbedret ytelse, tilgjengelighet og testdekning gjennom tverrfaglig samarbeid.</li>
-            <li>Redesign og reimplementering av Godt Forberedt for Gjensidige / Enonic XP.</li>
-          </ul>
-        </article>
+                  <nav class="job-card__browse" aria-label="Bla fra Gjensidige"><a href="#na">← Nyere jobb</a><a href="#jobb-3">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><img src="img/logos/gjensidige.svg" alt="" width="240" height="120"></div>
+              </article>
+              </div>
+            </li>
 
-        <article class="job">
-          <h3>Senior Frontend Developer Lead | RiksTV &amp; Strim</h3>
-          <p class="date">November 2017 - August 2024</p>
-          <ul>
-            <li>Designet og leverte WebTV- og streaming-UI i Next.js.</li>
-            <li>Integrerte headless CMS (Sanity) og bygget robuste frontend-arkitekturer.</li>
-            <li>Optimaliserte avspillingsflyt, oppstartstid og distribusjonspipelines.</li>
-          </ul>
-        </article>
+            <li class="job-slot" style="--index: 2">
+              <span class="job-anchor" id="jobb-3" tabindex="-1" aria-label="Jobberfaring 3"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-2">
+                <a class="job-card__tab" href="#jobb-3" aria-label="Vis RiksTV / Strim, 2017 — 2024"><span>2017 — 2024</span><strong>RiksTV / Strim</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2017 — 2024</p><span>03 / 12</span></div>
+                  <h3 id="job-title-2">RiksTV / Strim</h3>
+                  <p class="job-card__role">Senior Frontend Developer Lead</p>
+                  <p class="job-card__summary">WebTV- og streaming-UI i Next.js, headless CMS med Sanity og robuste frontend-arkitekturer.</p>
 
-        <article class="job">
-          <h3>Senior Consultant | Capra Consulting AS</h3>
-          <p class="date">Juli 2017 - Oktober 2017</p>
-          <ul>
-            <li>Frontend-konsulent utleid til Tine ved migrasjon fra Enonic CMS til Enonic XP.</li>
-            <li>Rådgivning for frontend-arkitektur og gjennomføring av beste praksis.</li>
-          </ul>
-        </article>
+                  <nav class="job-card__browse" aria-label="Bla fra RiksTV / Strim"><a href="#jobb-2">← Nyere jobb</a><a href="#jobb-4">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">RiksTV / Strim</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
 
-        <article class="job">
-          <h3>Senior System Developer | GET</h3>
-          <p class="date">Februar 2016 - Juni 2017</p>
-          <ul>
-            <li>Utviklet WebTV-klient i React med fokus på modulære komponenter og stabilitet.</li>
-            <li>Forbedret cross-browser-kompatibilitet og brukeropplevelse.</li>
-          </ul>
-        </article>
+            <li class="job-slot" style="--index: 3">
+              <span class="job-anchor" id="jobb-4" tabindex="-1" aria-label="Jobberfaring 4"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-3">
+                <a class="job-card__tab" href="#jobb-4" aria-label="Vis Capra Consulting, 2017"><span>2017</span><strong>Capra Consulting</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2017</p><span>04 / 12</span></div>
+                  <h3 id="job-title-3">Capra Consulting</h3>
+                  <p class="job-card__role">Senior Consultant</p>
+                  <p class="job-card__summary">Frontend-konsulent hos Tine under migrasjon fra Enonic CMS til Enonic XP.</p>
 
-        <article class="job">
-          <h3>Manager | BEKK Consulting AS</h3>
-          <p class="date">Juli 2010 - Januar 2016</p>
-          <ul>
-            <li>Ledet frontend-team og arkitektur for kundeprosjekter, hovedsakelig med Enonic.</li>
-            <li>Ansvar for leveranser, opplæring og kundeoppfølging (Jøtul, Get, Avinor, SIO (Studentsamskipnaden i Oslo
-              og Akershus) m.fl.).</li>
-          </ul>
-        </article>
+                  <nav class="job-card__browse" aria-label="Bla fra Capra Consulting"><a href="#jobb-3">← Nyere jobb</a><a href="#jobb-5">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><img src="img/logos/capra.avif" alt="" width="240" height="120"></div>
+              </article>
+              </div>
+            </li>
 
-        <article class="job">
-          <h3>Senior Consultant | Enonic AS</h3>
-          <p class="date">Februar 2006 - Juni 2010</p>
-          <ul>
-            <li>Utviklet funksjonalitet for Enonic CMS og Vertical Site.</li>
-            <li>Utarbeidet og holdt kurs for kunder og partnere.</li>
-          </ul>
-        </article>
+            <li class="job-slot" style="--index: 4">
+              <span class="job-anchor" id="jobb-5" tabindex="-1" aria-label="Jobberfaring 5"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-4">
+                <a class="job-card__tab" href="#jobb-5" aria-label="Vis GET, 2016 — 2017"><span>2016 — 2017</span><strong>GET</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2016 — 2017</p><span>05 / 12</span></div>
+                  <h3 id="job-title-4">GET</h3>
+                  <p class="job-card__role">Senior System Developer</p>
+                  <p class="job-card__summary">WebTV-klient i React med fokus på modulære komponenter, stabilitet og brukeropplevelse.</p>
 
-        <article class="job">
-          <h3>Klientprogrammerer | Idium AS</h3>
-          <p class="date">Juni 2004 - Januar 2006</p>
-          <ul>
-            <li>Utviklet Idium Portalserver og implementerte løsninger for kunder.</li>
-            <li>Arbeidet med XML/XSLT-basert malverk og malsystemer.</li>
-          </ul>
-        </article>
+                  <nav class="job-card__browse" aria-label="Bla fra GET"><a href="#jobb-4">← Nyere jobb</a><a href="#jobb-6">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">GET</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
 
-        <article class="job">
-          <h3>Systemutvikler | GAN Media AS</h3>
-          <p class="date">Mai 2001 - Mai 2004</p>
-          <ul>
-            <li>Implementerte CMS Gloria og utviklet en XML-til-print/web konverteringsmotor.</li>
-            <li>Frontend-utvikling i HTML, CSS og PHP.</li>
-          </ul>
-        </article>
+            <li class="job-slot" style="--index: 5">
+              <span class="job-anchor" id="jobb-6" tabindex="-1" aria-label="Jobberfaring 6"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-5">
+                <a class="job-card__tab" href="#jobb-6" aria-label="Vis BEKK Consulting, 2010 — 2016"><span>2010 — 2016</span><strong>BEKK Consulting</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2010 — 2016</p><span>06 / 12</span></div>
+                  <h3 id="job-title-5">BEKK Consulting</h3>
+                  <p class="job-card__role">Manager</p>
+                  <p class="job-card__summary">Ledet frontend-team og arkitektur for kundeprosjekter. Leveranser, opplæring og kundeoppfølging.</p>
 
-        <article class="job">
-          <h3>Web Application Consultant | Origin Norway AS</h3>
-          <p class="date">Januar 2000 - April 2001</p>
-          <ul>
-            <li>Utviklet brukervennlige grensesnitt og ERP-integrerte web-løsninger.</li>
-          </ul>
-        </article>
+                  <nav class="job-card__browse" aria-label="Bla fra BEKK Consulting"><a href="#jobb-5">← Nyere jobb</a><a href="#jobb-7">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">BEKK</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
 
-        <article class="job">
-          <h3>Faglærer i Webdesign | Aktiv Opplæring AS</h3>
-          <p class="date">August 2000 - Desember 2000</p>
-          <ul>
-            <li>Kursholder i HTML og CSS — planla og gjennomførte undervisning.</li>
-          </ul>
-        </article>
+            <li class="job-slot" style="--index: 6">
+              <span class="job-anchor" id="jobb-7" tabindex="-1" aria-label="Jobberfaring 7"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-6">
+                <a class="job-card__tab" href="#jobb-7" aria-label="Vis Enonic AS, 2006 — 2010"><span>2006 — 2010</span><strong>Enonic AS</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2006 — 2010</p><span>07 / 12</span></div>
+                  <h3 id="job-title-6">Enonic AS</h3>
+                  <p class="job-card__role">Senior Consultant</p>
+                  <p class="job-card__summary">Utviklet funksjonalitet for Enonic CMS og Vertical Site. Kurs for kunder og partnere.</p>
 
-        <article class="job">
-          <h3>IT-konsulent | Philips Norge AS</h3>
-          <p class="date">Juni 1998 - Desember 1999</p>
-          <ul>
-            <li>Utviklet første utgave av philips.no og driftet intranett/extranet.</li>
-            <li>Funksjonerte som webmaster og webredaktør for Philips Norge AS.</li>
-          </ul>
-        </article>
-      </section>
+                  <nav class="job-card__browse" aria-label="Bla fra Enonic AS"><a href="#jobb-6">← Nyere jobb</a><a href="#jobb-8">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">Enonic</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
 
-      <section class="main-contact">
-        <div class="inner-contact">
+            <li class="job-slot" style="--index: 7">
+              <span class="job-anchor" id="jobb-8" tabindex="-1" aria-label="Jobberfaring 8"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-7">
+                <a class="job-card__tab" href="#jobb-8" aria-label="Vis Idium AS, 2004 — 2006"><span>2004 — 2006</span><strong>Idium AS</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2004 — 2006</p><span>08 / 12</span></div>
+                  <h3 id="job-title-7">Idium AS</h3>
+                  <p class="job-card__role">Klientprogrammerer</p>
+                  <p class="job-card__summary">Idium Portalserver, kundeløsninger og XML/XSLT-basert malverk.</p>
+
+                  <nav class="job-card__browse" aria-label="Bla fra Idium AS"><a href="#jobb-7">← Nyere jobb</a><a href="#jobb-9">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">Idium</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
+
+            <li class="job-slot" style="--index: 8">
+              <span class="job-anchor" id="jobb-9" tabindex="-1" aria-label="Jobberfaring 9"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-8">
+                <a class="job-card__tab" href="#jobb-9" aria-label="Vis GAN Media AS, 2001 — 2004"><span>2001 — 2004</span><strong>GAN Media AS</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2001 — 2004</p><span>09 / 12</span></div>
+                  <h3 id="job-title-8">GAN Media AS</h3>
+                  <p class="job-card__role">Systemutvikler</p>
+                  <p class="job-card__summary">CMS Gloria og XML-til-print/web-konverteringsmotor. Frontend i HTML, CSS og PHP.</p>
+
+                  <nav class="job-card__browse" aria-label="Bla fra GAN Media AS"><a href="#jobb-8">← Nyere jobb</a><a href="#jobb-10">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">GAN Media</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
+
+            <li class="job-slot" style="--index: 9">
+              <span class="job-anchor" id="jobb-10" tabindex="-1" aria-label="Jobberfaring 10"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-9">
+                <a class="job-card__tab" href="#jobb-10" aria-label="Vis Origin Norway AS, 2000 — 2001"><span>2000 — 2001</span><strong>Origin Norway AS</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2000 — 2001</p><span>10 / 12</span></div>
+                  <h3 id="job-title-9">Origin Norway AS</h3>
+                  <p class="job-card__role">Web Application Consultant</p>
+                  <p class="job-card__summary">Brukervennlige grensesnitt og ERP-integrerte web-løsninger.</p>
+
+                  <nav class="job-card__browse" aria-label="Bla fra Origin Norway AS"><a href="#jobb-9">← Nyere jobb</a><a href="#jobb-11">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">Origin Norway</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
+
+            <li class="job-slot" style="--index: 10">
+              <span class="job-anchor" id="jobb-11" tabindex="-1" aria-label="Jobberfaring 11"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-10">
+                <a class="job-card__tab" href="#jobb-11" aria-label="Vis Aktiv Opplæring AS, 2000"><span>2000</span><strong>Aktiv Opplæring AS</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>2000</p><span>11 / 12</span></div>
+                  <h3 id="job-title-10">Aktiv Opplæring AS</h3>
+                  <p class="job-card__role">Faglærer i webdesign</p>
+                  <p class="job-card__summary">Planla og gjennomførte undervisning i HTML og CSS.</p>
+
+                  <nav class="job-card__browse" aria-label="Bla fra Aktiv Opplæring AS"><a href="#jobb-10">← Nyere jobb</a><a href="#jobb-12">Eldre jobb →</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">Aktiv Opplæring</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
+
+            <li class="job-slot" style="--index: 11">
+              <span class="job-anchor" id="jobb-12" tabindex="-1" aria-label="Jobberfaring 12"></span>
+              <div class="job-card">
+              <article class="job-card__content" aria-labelledby="job-title-11">
+                <a class="job-card__tab" href="#jobb-12" aria-label="Vis Philips Norge AS, 1998 — 1999"><span>1998 — 1999</span><strong>Philips Norge AS</strong><span aria-hidden="true">↗</span></a>
+                <div class="job-card__copy">
+                  <div class="job-card__meta"><p>1998 — 1999</p><span>12 / 12</span></div>
+                  <h3 id="job-title-11">Philips Norge AS</h3>
+                  <p class="job-card__role">IT-konsulent</p>
+                  <p class="job-card__summary">Utviklet første utgave av philips.no og driftet intranett/extranet. Webmaster og webredaktør.</p>
+
+                  <nav class="job-card__browse" aria-label="Bla fra Philips Norge AS"><a href="#jobb-11">← Nyere jobb</a></nav>
+                </div>
+                <div class="job-card__logo" aria-hidden="true"><span class="job-card__wordmark">Philips Norge</span><small>Midlertidig logoplassholder</small></div>
+              </article>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <section class="sidebar-card sidebar-card--dark" id="kontakt">
           <h2>Kontakt</h2>
-          <p>
-            Mob: <a href="tel:90576150" title="Ring meg gjerne">90576150</a><br />
-            E-post: <a href="mailto:perallan@gmail.com" title="Send meg gjerne en e-post">perallan@gmail.com</a>
-          </p>
-          <h2>Kompetanse</h2>
-          <p>Enonic CMS, Enonic XP, Sanity, HTML, CSS, React, TypeScript, NextJS, Vite, npm, Bun, Node, LESS, SASS.</p>
+          <ul class="contact-list">
+            <li><span>E-post</span><a href="mailto:perallan@gmail.com">perallan@gmail.com</a></li>
+            <li><span>Mobil</span><a href="tel:+4790576150">905 76 150</a></li>
+            <li><span>Sted</span><span>Oslo, Norge</span></li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/perallan/">/in/perallan</a></li>
+            <li><span>Web</span><a href="https://webadvice.no/">webadvice.no</a></li>
+          </ul>
+        </section>
 
-          <h2>Utdanning</h2>
-          <p>Universitetet i Oslo:<br />Astrofysikk</p>
-          <h2>Språk</h2>
-          <p>
-            Norsk: morsmål<br />
-            Engelsk: flytende<br />
-            Tysk: litt grunnleggende<br />
-            Spansk: bittelitt
-          </p>
+        <section class="sidebar-card" id="kompetanse">
+          <h2>Kompetanse</h2>
+          <ul class="pill-list">
+            <li>React</li><li>React Native</li><li>TypeScript</li><li>Next.js</li>
+            <li>Vite</li><li>Bun</li><li>Node</li><li>Sanity</li><li>Enonic XP</li>
+            <li>Design Systems</li><li>Accessibility</li><li>Product Thinking</li>
+            <li>AI-assisted development</li>
+          </ul>
+        </section>
+
+        <section class="sidebar-card sidebar-card--split">
+          <div>
+            <h2>Utdanning</h2>
+            <p><strong>Universitetet i Oslo</strong><br>Astrofysikk</p>
+          </div>
+
+          <div>
+            <h2>Språk</h2>
+            <dl class="language-list">
+              <div><dt>Norsk</dt><dd>Morsmål</dd></div>
+              <div><dt>Engelsk</dt><dd>Flytende</dd></div>
+              <div><dt>Tysk</dt><dd>Litt grunnleggende</dd></div>
+              <div><dt>Spansk</dt><dd>Un poquito</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="sidebar-card">
           <h2>Annet</h2>
-          <p>
-            ViteConf Amsterdam - sep 2025<br />
-            Growth Hacking Course (2-day crash course) - sep 2019<br />
-            React and Redux = Web Applications the Facebook way - mars 2017</p>
-        </div>
-      </section>
+          <ul class="other-list">
+            <li><strong>ViteConf Amsterdam</strong><span>Sep 2025</span></li>
+            <li><strong>Growth Hacking Course</strong><span>Sep 2019</span></li>
+            <li><strong>React and Redux</strong><span>Mar 2017</span></li>
+          </ul>
+        </section>
+
+        <blockquote class="quote-card">
+          <p><span>Gode digitale opplevelser</span> skal føles enkle.</p>
+          <footer>— Per Allan Johansson</footer>
+        </blockquote>
+      </aside>
     </div>
   </main>
-</body>
 
+  <footer class="site-footer">
+    <a href="https://webadvice.no/">webadvice.no</a>
+    <p>Frontend · Produkt · Mennesker · Teknologi</p>
+    <p>Oslo, Norge</p>
+  </footer>
+</body>
 </html>

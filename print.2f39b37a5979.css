@@ -1,0 +1,498 @@
+@page {
+  size: A4;
+  margin: 12mm 13mm 14mm;
+}
+
+:root {
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html,
+body {
+  background: #fff !important;
+}
+
+body {
+  margin: 0 !important;
+  color: #111 !important;
+  font-family: var(--font-body);
+  font-size: 8.6pt;
+  line-height: 1.33;
+}
+
+.reading-bar,
+.hero__nav,
+.status,
+.site-footer,
+.quote-card {
+  display: none !important;
+}
+
+/* PRINT HERO — compact, editorial, no black flood-fill */
+.hero {
+  background: #fff !important;
+  color: #111 !important;
+  border-bottom: 1px solid #b7b7b7;
+}
+
+.hero__inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 30mm !important;
+  grid-template-rows: auto auto !important;
+  gap: 2mm 7mm !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 0 5.5mm !important;
+  overflow: visible !important;
+}
+
+.brand {
+  grid-column: 1;
+  grid-row: 1;
+  position: static !important;
+  color: #111 !important;
+  font-size: 8.5pt !important;
+  line-height: 1 !important;
+}
+
+.brand span {
+  color: #111 !important;
+}
+
+.hero__copy {
+  grid-column: 1;
+  grid-row: 2;
+  position: static !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+
+.eyebrow {
+  margin: 0 0 .7mm !important;
+  color: #111 !important;
+  font-size: 7pt !important;
+  letter-spacing: .15em !important;
+}
+
+.role {
+  margin: 0 0 2mm !important;
+  color: #444 !important;
+  font-size: 7.6pt !important;
+  line-height: 1.15 !important;
+  letter-spacing: .08em !important;
+}
+
+.hero h1 {
+  max-width: 132mm !important;
+  margin: 0 !important;
+  color: #111 !important;
+  font-size: 20.5pt !important;
+  line-height: .94 !important;
+  letter-spacing: -.045em !important;
+}
+
+.hero h1 br:first-of-type {
+  display: none;
+}
+
+.hero h1 span {
+  color: #111 !important;
+}
+
+.hero__lead {
+  max-width: 125mm !important;
+  margin: 2.2mm 0 0 !important;
+  font-size: 8.5pt !important;
+  line-height: 1.35 !important;
+}
+
+.hero__tags {
+  margin: 2.2mm 0 0 !important;
+  gap: 0 !important;
+  color: #333 !important;
+  font-size: 6.2pt !important;
+  line-height: 1.2 !important;
+}
+
+.hero__tags li:not(:last-child)::after {
+  margin-inline: 2mm !important;
+}
+
+.hero__portrait {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  position: static !important;
+  width: 30mm !important;
+  height: 30mm !important;
+  margin: 0 !important;
+  align-self: end;
+}
+
+.hero__portrait::before,
+.hero__portrait figcaption {
+  display: none !important;
+}
+
+.hero__portrait img {
+  width: 30mm !important;
+  height: 30mm !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  filter: grayscale(1) contrast(1.03) !important;
+}
+
+/* DOCUMENT BODY — one safe column */
+.page-shell {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 6mm 0 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+.content-grid {
+  display: block !important;
+}
+
+.content-main,
+.sidebar {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* CURRENT ROLE */
+.now-card {
+  --now-axis: 8mm;
+  display: grid !important;
+  grid-template-columns: 14mm minmax(0, 1fr) !important;
+  gap: 0 4mm !important;
+  margin: 0 0 6mm !important;
+  padding: 4mm 5mm 4.5mm 3mm !important;
+  border: 1px solid #aaa !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+.now-card__rail {
+  left: var(--now-axis) !important;
+  top: 14.9mm !important;
+  bottom: 5mm !important;
+  width: .45mm !important;
+  background: #999 !important;
+}
+
+.now-card__dot {
+  left: 50% !important;
+  top: 3.6mm !important;
+  width: 2.2mm !important;
+  height: 2.2mm !important;
+  transform: translate(-50%, 0) !important;
+  background: #111 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.now-card__label {
+  padding: 1.5mm 1mm !important;
+  border: 1px solid #aaa !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  color: #111 !important;
+  font-size: 7.5pt !important;
+}
+
+.job-heading {
+  display: block !important;
+}
+
+.job-heading .date {
+  margin: 0 0 .5mm !important;
+  font-size: 6.8pt !important;
+}
+
+.job-heading h2 {
+  margin: 0 !important;
+  font-size: 13pt !important;
+  line-height: 1.05 !important;
+}
+
+.job-heading .title {
+  margin: 1mm 0 0 !important;
+  font-size: 8.5pt !important;
+}
+
+.summary {
+  margin: 3mm 0 2.5mm !important;
+  max-width: none !important;
+  font-size: 8pt !important;
+  line-height: 1.35 !important;
+}
+
+.impact-list {
+  gap: .8mm !important;
+  font-size: 7.7pt !important;
+  line-height: 1.3 !important;
+}
+
+.impact-list li {
+  padding-left: 4mm !important;
+}
+
+.impact-list li::before {
+  left: 0 !important;
+  top: .55em !important;
+  width: 1.5mm !important;
+  height: 1.5mm !important;
+  background: #111 !important;
+}
+
+/* EXPERIENCE */
+.experience {
+  margin-top: 0 !important;
+}
+
+.section-heading {
+  display: block !important;
+  margin: 0 0 2mm !important;
+}
+
+.section-heading h2 {
+  margin: 0 !important;
+  font-size: 14pt !important;
+  line-height: 1 !important;
+}
+
+.section-heading p {
+  display: none !important;
+}
+
+.timeline::before {
+  left: 2mm !important;
+  top: 2mm !important;
+  bottom: 2mm !important;
+  background: #bbb !important;
+}
+
+.timeline-item {
+  display: grid !important;
+  grid-template-columns: 6mm 25mm minmax(0, 1fr) !important;
+  gap: 2mm !important;
+  padding: 0 0 3.3mm !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+.timeline-marker {
+  width: 2mm !important;
+  height: 2mm !important;
+  margin: 1.5mm 0 0 1mm !important;
+  background: #111 !important;
+  box-shadow: 0 0 0 1.1mm #fff !important;
+}
+
+.timeline-item--current .timeline-marker {
+  width: 2.7mm !important;
+  height: 2.7mm !important;
+  margin: 1mm 0 0 .65mm !important;
+  background: #111 !important;
+}
+
+.timeline-date {
+  margin: .6mm 0 0 !important;
+  color: #333 !important;
+  font-size: 6.8pt !important;
+}
+
+.timeline-body h3 {
+  margin: 0 !important;
+  font-size: 8.5pt !important;
+  line-height: 1.15 !important;
+}
+
+.timeline-body h3 span {
+  margin-left: 1.5mm !important;
+  color: #555 !important;
+  font-size: 6.6pt !important;
+}
+
+.timeline-body p {
+  margin: .8mm 0 0 !important;
+  color: #333 !important;
+  font-size: 7.1pt !important;
+  line-height: 1.27 !important;
+}
+
+/* SIDE INFORMATION — moved below experience as a clean 2-column block */
+.sidebar {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 4mm !important;
+  margin-top: 6mm !important;
+  break-before: auto !important;
+}
+
+.sidebar-card {
+  display: block !important;
+  min-width: 0 !important;
+  padding: 4mm !important;
+  border: 1px solid #bbb !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  color: #111 !important;
+  box-shadow: none !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+.sidebar-card h2 {
+  margin: 0 0 2.2mm !important;
+  font-size: 9.5pt !important;
+  line-height: 1 !important;
+}
+
+.contact-list {
+  display: grid !important;
+  gap: 1.5mm !important;
+}
+
+.contact-list li {
+  display: grid !important;
+  grid-template-columns: 16mm minmax(0, 1fr) !important;
+  gap: 2mm !important;
+  min-width: 0 !important;
+  font-size: 7pt !important;
+  line-height: 1.2 !important;
+}
+
+.contact-list li > span:first-child {
+  color: #555 !important;
+  font-size: 5.8pt !important;
+}
+
+.contact-list a,
+.contact-list li > span:last-child {
+  min-width: 0 !important;
+  overflow-wrap: anywhere !important;
+  font-size: 7.2pt !important;
+}
+
+.pill-list {
+  display: block !important;
+}
+
+.pill-list li {
+  display: inline !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  font-size: 7pt !important;
+}
+
+.pill-list li:not(:last-child)::after {
+  content: " · ";
+}
+
+.sidebar-card--split {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 4mm !important;
+}
+
+.sidebar-card--split > div + div {
+  padding-top: 0 !important;
+  padding-left: 4mm !important;
+  border-top: 0 !important;
+  border-left: 1px solid #ccc !important;
+}
+
+.sidebar-card p,
+.language-list,
+.other-list {
+  font-size: 7pt !important;
+}
+
+.language-list {
+  gap: 1.2mm !important;
+}
+
+.other-list {
+  gap: 1.5mm !important;
+}
+
+.other-list li {
+  font-size: 7pt !important;
+}
+
+.other-list span {
+  font-size: 7pt !important;
+}
+
+a {
+  color: #111 !important;
+  text-decoration: none !important;
+}
+
+/* Prevent browser engines from treating these blocks as infinitely wide. */
+.content-grid,
+.content-main,
+.sidebar,
+.sidebar-card,
+.timeline,
+.timeline-item,
+.now-card {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+
+/* v6 — compact editorial print hero */
+@media print {
+  .hero h1 br {
+    display: none !important;
+  }
+
+  .hero h1 span {
+    display: block !important;
+    margin-top: .3mm !important;
+  }
+
+  .hero__lead {
+    max-width: 120mm !important;
+  }
+
+  .hero__tags {
+    margin-top: 2mm !important;
+    font-size: 5.9pt !important;
+  }
+
+  .hero__portrait {
+    align-self: center !important;
+  }
+}
+
+/* Stacking deck becomes an ordinary, compact document on paper. */
+.job-stack { display: block; margin: 0; padding: 0; }
+.job-card { position: static; padding: 0; margin: 0 0 4mm; break-inside: avoid; }
+.job-card__content { display: block; min-height: 0; padding: 3mm; border: 1px solid #ccc; border-radius: 0; background: #fff !important; box-shadow: none; animation: none !important; transform: none !important; filter: none !important; }
+.job-card__meta { margin-bottom: 1mm; font-size: 7pt; }
+.job-card h3 { font-size: 12pt; }
+.job-card__role { margin-top: 1mm; font-size: 8pt; }
+.job-card__summary { margin: 2mm 0; font-size: 8pt; }
+.job-card__logo { display: none; }
+
+.job-card__tab, .job-card__browse { display: none; }
+.job-card__copy { padding: 0; }
