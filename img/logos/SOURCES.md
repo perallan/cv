@@ -5,3 +5,5 @@
 - capra.avif: https://cdn.prod.website-files.com/6a54973ef02ea0f41cdb7f24/6a54973ef02ea0f41cdb7f4c_Logo%20symbol.avif
 
 Other companies use text placeholders, not recreated logos.
+
+- uno-x.webp: supplied by Per Allan Johansson (uno-x_logo.webp).
